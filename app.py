@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "thank you working on this python code"
+    return "sucessfully working on aks using argocd and gitaction"
 
 @app.route("/about")
 def about():
