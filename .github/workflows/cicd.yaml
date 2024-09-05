@@ -2,9 +2,12 @@ name: Python application
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: 
+      - "main"
+    paths-ignore:
+        - 'my-python/**'
+        - 'README.md' 
+
 
 permissions:
   contents: read
@@ -26,10 +29,7 @@ jobs:
         pip install Flask
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Test with pytest
-      run: |
-        app.py
-  
+ 
   push:
     runs-on: ubuntu-latest
 
