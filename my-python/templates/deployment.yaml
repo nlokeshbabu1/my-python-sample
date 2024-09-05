@@ -5,7 +5,7 @@ metadata:
   labels:
     app: python
 spec:
-  replicas: {{ Value.replicaCount }}
+  replicas: 2
   selector:
     matchLabels:
       app: python
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: python
-        image: nlokeshbabu/my-python:{{ Value.image.tags }}
+        image: nlokeshbabu/my-python
         ports:
-        - containerPort: 80
+        - containerPort: 5000
 
