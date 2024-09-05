@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-python
+  labels:
+    app: python
+spec:
+  replicas: {{ Value.replicaCount }}
+  selector:
+    matchLabels:
+      app: python
+  template:
+    metadata:
+      labels:
+        app: python
+    spec:
+      containers:
+      - name: python
+        image: nlokeshbabu/my-python:{{ Value.image.tags }}
+        ports:
+        - containerPort: 80
+
