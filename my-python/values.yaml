@@ -8,7 +8,7 @@ image:
   repository: nlokeshbabu/my-python
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "10717033511"
+  tag: "10717168250"
 
 ingress:
   enabled: false
