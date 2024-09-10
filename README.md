@@ -1,4 +1,4 @@
-In this repositry file we are going to create CI/CD are python flask application using following service 
+In this repositry file we are going to create CI/CD are python flask application and hosting on eks or aks using following service 
 
 1. Git action
 2. ArgoCD
