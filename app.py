@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "sucessfully working on aws clustre"
+    return "working in AKS/EKS"
 
 @app.route("/about")
 def about():
