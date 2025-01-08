@@ -15,7 +15,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on:  self-hosted  #ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
@@ -31,7 +31,7 @@ jobs:
 
  
   push:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted #ubuntu-latest
 
     needs: build
 
@@ -57,7 +57,7 @@ jobs:
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-python:${{github.run_id}}
 
   update-newtag-in-helm-chart:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted #ubuntu-latest
 
     needs: push
 
